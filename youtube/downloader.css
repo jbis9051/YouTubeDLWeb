@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.title {
+    font-size: 20px;
+}
+#wrapper {
+    margin: 0 auto;
+    background: #eaeaea;
+    padding: 30px 30px 30px 30px;
+    width: 80%;
+    color: #3162c5;;
+}
+.fakeInput {
+    margin: 0;
+    border: 3px solid;
+    border-color: #7eb0d1;
+    background: white;
+}
+.error {
+    color: darkred;
+}
+.standard_button {
+    background: dodgerblue;
+    padding: 10px;
+    margin-left: 0;
+    color: white;
+    font-size: 15px;
+    border-style: none;
+}
+.urlInput {
+    font-size: 20px;
+    padding: 10px 10px 10px 15px;
+    width: 84%;
+    border-radius: 3px;
+    border-style: none;
+    margin: 0;
+}
+.format_select {
+    display: inline-block;
+    position: relative;
+}
+.format_select div {
+    display: inline-block;
+    background: dodgerblue;
+    padding: 10px;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+   font-size: 15px;
+}
+.format_select div[data-selected="true"] {
+    padding: 7px;
+    border: 3px solid #46d173;
+
+}
+.format_select div:hover {
+    background: royalblue;
+}
+.download_list_wrapper {
+    margin-top: 50px;
+}
+.download_item_wrapper {
+    border: solid black;
+    border-top-width: 1px;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    padding: 10px;
+    background: #cdcdcd;
+}
+.download_item_wrapper[data-progress="done"]{
+    opacity: 0.5;
+}
+.download_item_wrapper label {
+    font-weight: bolder;
+}
+.download_item_wrapper .youtube_url {
+    font-family: monospace;
+    font-size: 17px;
+}
+.download_item_wrapper .loading_bar {
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+    border: 1px solid #2980b9;
+    border-radius: 3px;
+    background-image:
+            repeating-linear-gradient(
+                    -45deg,
+                    #2980b9,
+                    #2980b9 11px,
+                    #eee 10px,
+                    #eee 20px /* determines size */
+            );
+    background-size: 28px 28px;
+    animation: load .5s linear infinite;
+}
+.download_item_wrapper .download_button {
+    display: none;
+    background: dodgerblue;
+    padding: 10px;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 15px;
+}
+@keyframes load {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 28px 0;
+    }
+}
